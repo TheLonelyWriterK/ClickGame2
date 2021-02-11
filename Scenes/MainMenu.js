@@ -16,15 +16,18 @@ class MainMenu extends Phaser.Scene
             this.coinsPerSecond = null;
     }
 
+
     init()
     {
 
     }
 
+
     preload()
     {
 
     }
+
 
     create()
     {
@@ -37,10 +40,19 @@ class MainMenu extends Phaser.Scene
 
             // Sets the "moneyButton" as on state of interactive
             this.moneyButton.on("pointerdown",this.onClickAddMoney,this)
+
+        // 
     }
+
 
     update()
     {
 
+    }
+
+    
+    onClickAddMoney()
+    {
+        this.money += 1;
     }
 }

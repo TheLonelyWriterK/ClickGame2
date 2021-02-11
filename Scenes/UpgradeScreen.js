@@ -14,7 +14,7 @@ class UpgradeScreen extends Phaser.Scene
 
     init()
     {
-
+        this.MainMenu = this.scene.get("MainMenu")
     }
 
     preload()
@@ -31,10 +31,5 @@ class UpgradeScreen extends Phaser.Scene
     update()
     {
 
-    }
-
-    onClickAddMoney()
-    {
-        this.money += 1;
     }
 }
