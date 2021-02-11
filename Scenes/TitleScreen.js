@@ -4,9 +4,6 @@ class TitleScreen extends Phaser.Scene
     {
         // Names the level TitleScreen
         super("TitleScreen")
-        
-
-        // Variables
             
     }
 
