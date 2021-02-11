@@ -4,9 +4,9 @@ var config = {
     width: 1600,
     height: 900,
     scaleMode: Phaser.Scale.FIT,
-    backgroundColor: 0x110022,
+    backgroundColor: 0x112233,
 
-    scene: [TitleScreen,MainMenu]
+    scene: [TitleScreen,MainMenu,UpgradeScreen]
 
 }
 
