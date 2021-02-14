@@ -12,13 +12,13 @@ class MainMenu extends Phaser.Scene
 
             
             
+            
     }
 
 
     init()
     {
-        // Import variables from
-        this.Hud = this.scene.get("Hud")
+        
     }
 
 
@@ -40,8 +40,8 @@ class MainMenu extends Phaser.Scene
             // Sets the "moneyButton" as on state of interactive
             this.moneyButton.on("pointerdown",this.onClickAddMoney,this)
 
-            // 
-        // 
+            // Draws the text for the money counter
+            this.moneyButtonText = this.add.text(800,50,"Money: " + Hud.money)
     }
 
 
@@ -53,11 +53,12 @@ class MainMenu extends Phaser.Scene
     
     onClickAddMoney()
     {
-        this.money += 1;
+        Hud.money += Hud.moneyAddAmount;
+        console.log(Hud.money)
     }
 
     onClickOpenUpgradeMenu()
     {
-        this.scene.start("MainMenu");
+        this.scene.start("UpgradeMenu");
     }
 }
