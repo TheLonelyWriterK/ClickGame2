@@ -6,6 +6,9 @@ class TitleScreen extends Phaser.Scene
         super("TitleScreen")
         
         // Variables
+        this.startButton = null;
+        this.startButtonText = null;
+
             
     }
 
@@ -37,6 +40,9 @@ class TitleScreen extends Phaser.Scene
 
             // Turns the button into an "on" state of interaction
             this.startButton.on("pointerdown",this.onClickStartGame,this)
+
+        // Start Text
+        this.startButtonText = this.add.text(775,440,"Start")
 
 
         // Logs the start screen has finished loading

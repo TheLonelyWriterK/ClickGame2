@@ -6,7 +6,7 @@ var config = {
     scaleMode: Phaser.Scale.FIT,
     backgroundColor: 0x112233,
 
-    scene: [TitleScreen,MainMenu,UpgradeScreen]
+    scene: [TitleScreen,MainMenu,UpgradeScreen,Hud]
 
 }
 
