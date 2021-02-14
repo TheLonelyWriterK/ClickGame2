@@ -6,15 +6,12 @@ class UpgradeScreen extends Phaser.Scene
         super("UpgradeScreen")
 
         // Variables
-            // Money Button
-            this.moneyButton = null;
-            // Money Button Text
-            this.moneyButtonText = null;
+           
     }
 
     init()
     {
-        this.MainMenu = this.scene.get("MainMenu")
+        this.MainMenu = this.scene.get("Hud")
     }
 
     preload()
