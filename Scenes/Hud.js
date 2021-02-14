@@ -25,10 +25,10 @@ class Hud extends Phaser.Scene
     create()
     {
         // Draws the text for the money counter
-        this.moneyButtonText = this.add.text(800,50,"Money: " + this.money)
+        this.moneyButtonText = this.add.text(800,50,"Money: " + this.money).setOrigin(0.5)
 
         // Draws the text for the CPS counter
-        this.coinsPerSecondText = this.add.text(800,100,"Coins Per Second:" + this.coinsPerSecond)
+        this.coinsPerSecondText = this.add.text(800,100,"Coins Per Second:" + this.coinsPerSecond).setOrigin(0.5)
     }
 
     update()
@@ -43,6 +43,6 @@ class Hud extends Phaser.Scene
 
     onClickUpgradeCPS()
     {
-        
+
     }
 }

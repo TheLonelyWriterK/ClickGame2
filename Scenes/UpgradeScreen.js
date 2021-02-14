@@ -11,7 +11,7 @@ class UpgradeScreen extends Phaser.Scene
 
     init()
     {
-        this.MainMenu = this.scene.get("Hud")
+        this.Hud = this.scene.get("Hud")
     }
 
     preload()
