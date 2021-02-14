@@ -8,6 +8,7 @@ class TitleScreen extends Phaser.Scene
         // Variables
         this.startButton = null;
         this.startButtonText = null;
+        this.gameName = null;
 
             
     }
@@ -33,7 +34,7 @@ class TitleScreen extends Phaser.Scene
 
         // Start Button
             // Creates the start button
-            this.startButton = this.add.rectangle(800,450,100,100,0xff0000)
+            this.startButton = this.add.rectangle(800,450,500,500,0xff0000)
 
             // Makes the start button interactive
             this.startButton.setInteractive()
@@ -41,9 +42,13 @@ class TitleScreen extends Phaser.Scene
             // Turns the button into an "on" state of interaction
             this.startButton.on("pointerdown",this.onClickStartGame,this)
 
-        // Start Text
-        this.startButtonText = this.add.text(775,440,"Start")
+            
+        // Text
+            // Start Text
+            this.startButtonText = this.add.text(800,450,"Start",{fontSize: 30}).setOrigin(0.5)
 
+            // Game Name Text
+            this.gameName = this.add.text(800,50,"First Phaser Clicker Game",{fontSize: 100}).setOrigin(0.5)
 
         // Logs the start screen has finished loading
         console.log("Scene Loaded: Start Screen")

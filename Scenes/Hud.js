@@ -6,9 +6,16 @@ class Hud extends Phaser.Scene
         super("Hud")
 
         // Variables
+        // Money
         this.money = 0;
-        this.coinsPerSecond = 0;
+        // How much money is added each click
         this.moneyAddAmount = 1;
+        // The Coins Per Second
+        this.coinsPerSecond = 0;
+        // 
+
+
+        
 
     }
 
@@ -33,16 +40,17 @@ class Hud extends Phaser.Scene
 
     update()
     {
-        this.moneyButtonText.setText("Money: " + this.money)
+        // Updates the "moneyButtonText" text
+        this.moneyButtonText.setText("Money: " + this.money).setOrigin(0.5)
+
+        // Updates the "moneyButtonText" text
+        this.coinsPerSecondText.setText("Coins Per Second: " + this.coinsPerSecond).setOrigin(0.5)
     }
 
-    onClickCloseUpgradeMenu()
-    {
-
-    }
+    
 
     onClickUpgradeCPS()
     {
-
+        this.coinsPerSecond += 1;
     }
 }

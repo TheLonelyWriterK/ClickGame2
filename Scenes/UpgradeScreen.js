@@ -6,7 +6,13 @@ class UpgradeScreen extends Phaser.Scene
         super("UpgradeScreen")
 
         // Variables
-           
+            // Closing button
+            this.closingUpgradeMenuButton = null;
+            this.closingUpgradeMenuButtonText = null;
+
+            // Cps upgrades
+            this.coinsPerSecondButton = null;
+            this.coinsPerSecondButtonText = null;
     }
 
     init()
@@ -28,5 +34,10 @@ class UpgradeScreen extends Phaser.Scene
     update()
     {
 
+    }
+
+    onClickCloseUpgradeMenu()
+    {
+        this.scene.launch("MainMenu")
     }
 }
