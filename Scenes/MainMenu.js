@@ -39,9 +39,6 @@ class MainMenu extends Phaser.Scene
 
             // Sets the "moneyButton" as on state of interactive
             this.moneyButton.on("pointerdown",this.onClickAddMoney,this)
-
-            // Draws the text for the money counter
-            this.moneyButtonText = this.add.text(800,50,"Money: " + Hud.money)
     }
 
 

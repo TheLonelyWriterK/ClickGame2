@@ -63,5 +63,14 @@ class TitleScreen extends Phaser.Scene
 
         // Logs that the "MainMenu" scene has been loaded
         console.log("Scene Loaded: MainMenu")
+
+        // Logs tat the "Hud" scene is loading
+        console.log("Loading Scene: Hud")
+
+        // Loads the "Hud" scene
+        this.scene.launch("Hud")
+
+        // Logs tat the "Hud" scene is loading
+        console.log("Scene Loaded: Hud")
     }
 }

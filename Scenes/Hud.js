@@ -24,7 +24,8 @@ class Hud extends Phaser.Scene
 
     create()
     {
-
+        // Draws the text for the money counter
+        this.moneyButtonText = this.add.text(800,50,"Money: " + Hud.money)
     }
 
     update()
