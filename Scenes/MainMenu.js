@@ -18,6 +18,7 @@ class MainMenu extends Phaser.Scene
 
     init()
     {
+        // Pulls the variables from the "Hud" scene
          this.Hud = this.scene.get("Hud")
     }
 
@@ -40,8 +41,9 @@ class MainMenu extends Phaser.Scene
             // Sets the "moneyButton" as on state of interactive
             this.moneyButton.on("pointerdown",this.onClickAddMoney,this)
 
-            // Let's the player know this is the button for money
+            // Let's the player know this is the button for making money
             this.moneyButtonText = this.add.text(800,450,"+" + this.Hud.moneyAddAmount + " Money").setOrigin(0.5)
+
 
         // Upgrade Menu Button
             // Creates the rectangle for the upgrade menu opening button
@@ -52,6 +54,9 @@ class MainMenu extends Phaser.Scene
 
             // Sets the "upgradeMenuButton" as an on state of interactive
             this.upgradeMenuButton.on("pointerdown",this.onClickOpenUpgradeMenu,this)
+
+            // Let's the player know this is the upgrade menu
+            this.upgradeMenuButtonText = this.add.text(800,600,"Upgrade Menu",{color: 'red', fontSize: 14, font: "Times New Roman"}).setOrigin(0.5)
     }
 
 

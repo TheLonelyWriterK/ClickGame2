@@ -13,6 +13,8 @@ class UpgradeScreen extends Phaser.Scene
             // Cps upgrades
             this.coinsPerSecondButton = null;
             this.coinsPerSecondButtonText = null;
+
+
     }
 
     init()
@@ -27,7 +29,9 @@ class UpgradeScreen extends Phaser.Scene
 
     create()
     {
-        
+        // Coins Per Sec Upgrade
+            // Creates the rectangle for the button
+            this.coinsPerSecondButton = this.add.rectangle(800,600,100,50,0xff0000)
 
     }
 
