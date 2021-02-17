@@ -46,11 +46,4 @@ class Hud extends Phaser.Scene
         // Updates the "moneyButtonText" text
         this.coinsPerSecondText.setText("Coins Per Second: " + this.coinsPerSecond).setOrigin(0.5)
     }
-
-    
-
-    onClickUpgradeCPS()
-    {
-        this.coinsPerSecond += 1;
-    }
 }

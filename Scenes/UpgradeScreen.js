@@ -42,6 +42,8 @@ class UpgradeScreen extends Phaser.Scene
 
     onClickCloseUpgradeMenu()
     {
-        this.scene.launch("MainMenu")
+        this.scene.start("MainMenu")
     }
+    
+    
 }

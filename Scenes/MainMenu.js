@@ -33,7 +33,7 @@ class MainMenu extends Phaser.Scene
     {
         // Money Button
             // Creates the rectangle for the money button
-            this.moneyButton = this.add.rectangle(800,450,100,50,0x110022)
+            this.moneyButton = this.add.rectangle(800,450,200,100,0x110022)
 
             // Sets the "moneyButton" as interactive
             this.moneyButton.setInteractive()
@@ -47,7 +47,7 @@ class MainMenu extends Phaser.Scene
 
         // Upgrade Menu Button
             // Creates the rectangle for the upgrade menu opening button
-            this.upgradeMenuButton = this.add.rectangle(800,600,100,50,0x113322)
+            this.upgradeMenuButton = this.add.rectangle(800,600,200,100,0x113322)
 
             // Sets the "upgradeMenuButton" as interactive
             this.upgradeMenuButton.setInteractive()
@@ -66,13 +66,18 @@ class MainMenu extends Phaser.Scene
     }
 
     
+    // Adds a function for clicking to add money
     onClickAddMoney()
     {
+        // Money + money amount
         this.Hud.money += this.Hud.moneyAddAmount;
+
+        // Log Hud.money
         console.log(this.Hud.money)
     }
 
 
+    // Creates a function for opening the upgrade menu
     onClickOpenUpgradeMenu()
     {
         this.scene.start("UpgradeMenu");
