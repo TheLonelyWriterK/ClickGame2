@@ -1,69 +1,62 @@
-class TitleScreen extends Phaser.Scene
-{
-    constructor()
-    {
+class TitleScreen extends Phaser.Scene {
+    constructor() {
         // Names the level TitleScreen
         super("TitleScreen")
-        
+
         // Variables
         this.startButton = null;
         this.startButtonText = null;
         this.gameName = null;
 
-            
-    }
-
-
-    init()
-    {
 
     }
 
 
-    preload()
-    {
+    init() {
 
     }
 
 
-    create()
-    {
+    preload() {
+
+    }
+
+
+    create() {
         // Logs the start screen began loading
         console.log("Loading Scene: Start Screen")
 
 
         // Start Button
-            // Creates the start button
-            this.startButton = this.add.rectangle(800,450,500,500,0xff0000)
+        // Creates the start button
+        this.startButton = this.add.rectangle(800, 450, 500, 500, 0xff0000)
 
-            // Makes the start button interactive
-            this.startButton.setInteractive()
+        // Makes the start button interactive
+        this.startButton.setInteractive()
 
-            // Turns the button into an "on" state of interaction
-            this.startButton.on("pointerdown",this.onClickStartGame,this)
+        // Turns the button into an "on" state of interaction
+        this.startButton.on("pointerdown", this.onClickStartGame, this)
 
-            
+
         // Text
-            // Start Text
-            this.startButtonText = this.add.text(800,450,"Start",{fontSize: 30}).setOrigin(0.5)
+        // Start Text
+        this.startButtonText = this.add.text(800, 450, "Start", { fontSize: 30 }).setOrigin(0.5)
 
-            // Game Name Text
-            this.gameName = this.add.text(800,50,"First Phaser Clicker Game",{fontSize: 100}).setOrigin(0.5)
+        // Game Name Text
+        this.gameName = this.add.text(800, 50, "First Phaser Clicker Game", { fontSize: 100 }).setOrigin(0.5)
 
         // Logs the start screen has finished loading
         console.log("Scene Loaded: Start Screen")
     }
 
 
-    update()
-    {
-        
+    update() {
+
     }
 
 
     // Creates a function for when a "Click" event has happened
-    onClickStartGame()
-    {
+    onClickStartGame() {
         // Logs that the "MainMenu" scene is loading
         console.log("Loading Scene: MainMenu")
 

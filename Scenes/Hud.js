@@ -1,7 +1,5 @@
-class Hud extends Phaser.Scene
-{
-    constructor()
-    {
+class Hud extends Phaser.Scene {
+    constructor() {
         // Names the level "Hud"
         super("Hud")
 
@@ -15,31 +13,27 @@ class Hud extends Phaser.Scene
         // 
 
 
-        
+
 
     }
 
-    init()
-    {
+    init() {
 
     }
 
-    preload()
-    {
+    preload() {
 
     }
 
-    create()
-    {
+    create() {
         // Draws the text for the money counter
-        this.moneyButtonText = this.add.text(800,50,"Money: " + this.money).setOrigin(0.5)
+        this.moneyButtonText = this.add.text(800, 50, "Money: " + this.money).setOrigin(0.5)
 
         // Draws the text for the CPS counter
-        this.coinsPerSecondText = this.add.text(800,100,"Coins Per Second:" + this.coinsPerSecond).setOrigin(0.5)
+        this.coinsPerSecondText = this.add.text(800, 100, "Coins Per Second:" + this.coinsPerSecond).setOrigin(0.5)
     }
 
-    update()
-    {
+    update() {
         // Updates the "moneyButtonText" text
         this.moneyButtonText.setText("Money: " + this.money).setOrigin(0.5)
 
