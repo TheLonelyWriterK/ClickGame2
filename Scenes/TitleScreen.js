@@ -43,7 +43,7 @@ class TitleScreen extends Phaser.Scene {
         this.startButtonText = this.add.text(800, 450, "Start", { fontSize: 30 }).setOrigin(0.5)
 
         // Game Name Text
-        this.gameName = this.add.text(800, 50, "First Phaser Clicker Game", { fontSize: 100 }).setOrigin(0.5)
+        this.gameName = this.add.text(800, 50, "My First Actual Game", { fontSize: 100 }).setOrigin(0.5)
 
         // Logs the start screen has finished loading
         console.log("Scene Loaded: Start Screen")

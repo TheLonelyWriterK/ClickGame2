@@ -6,15 +6,15 @@ class Hud extends Phaser.Scene {
         // Variables
         // Money
         this.money = 0;
+
         // How much money is added each click
         this.moneyAddAmount = 1;
+
         // The Coins Per Second
         this.coinsPerSecond = 0;
-        // 
 
-
-
-
+        // Coins Per Second Add Amount
+        this.coinsPerSecondAddAmount = 0;
     }
 
     init() {

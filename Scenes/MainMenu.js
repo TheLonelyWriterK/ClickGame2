@@ -3,10 +3,12 @@ class MainMenu extends Phaser.Scene {
         // Names the level MainMenu
         super("MainMenu")
 
+
         // Variables
         // Money Button
         this.moneyButton = null;
         this.moneyButtonText = null;
+
 
         // Upgrade Menu Button
         this.upgradeMenuButton = null;

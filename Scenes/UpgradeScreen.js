@@ -9,10 +9,12 @@ class UpgradeScreen extends Phaser.Scene {
         this.closingUpgradeMenuButtonText = null;
 
         // Cps upgrades
-        this.coinsPerSecondButton = null;
+        this.coinsPerSecondUpgradeButton = null;
         this.coinsPerSecondButtonText = null;
 
-
+        // Exit button
+        this.UpgradeScreenExitButton = null;
+        this.UpgradeScreenExitButtonX = null;
     }
 
     init() {
@@ -26,12 +28,23 @@ class UpgradeScreen extends Phaser.Scene {
     create() {
         // Coins Per Sec Upgrade
         // Creates the rectangle for the button
-        this.coinsPerSecondButton = this.add.rectangle(800, 600, 100, 50, 0xff0000)
+        this.coinsPerSecondUpgradeButton = this.add.rectangle(800, 600, 100, 50, 0xff0000)
 
         // Sets coinsPerSecondButton to interactive
         this.coinsPerSecondButton.setInteractive()
 
+        // Sets the "coinsPerSecond" to an on state of interaction
+        this.coinsPerSecondButton.on("pointerdown")
 
+        // Exit Upgrade Menu Button
+        // Draws the rectangle for the button
+        this.UpgradeScreenExitButton = this.add.rectangle(1600, 900, 30, 30, 0xff0000)
+
+        // sets "UpgradeScreenExitButton" to interactive
+        this.UpgradeScreenExitButton.setInteractive()
+
+        // Turns the "UpgradeScreenExitButton" to an on state of interaction
+        this.UpgradeScreenExitButton.on("pointerdown", this.onClickCloseUpgradeMenu, this)
     }
 
     update() {
@@ -40,6 +53,10 @@ class UpgradeScreen extends Phaser.Scene {
 
     onClickCloseUpgradeMenu() {
         this.scene.start("MainMenu")
+    }
+
+    onClickUpgradeCoinsPerSec() {
+        this.Hud.coinsPerSecond += this.Hud.coinsPerSecondAddAmount
     }
 
 
