@@ -34,7 +34,8 @@ class UpgradeScreen extends Phaser.Scene {
         this.coinsPerSecondButton.setInteractive()
 
         // Sets the "coinsPerSecond" to an on state of interaction
-        this.coinsPerSecondButton.on("pointerdown")
+        this.coinsPerSecondButton.on("pointerdown", this.onClickUpgradeCoinsPerSec, this)
+
 
         // Exit Upgrade Menu Button
         // Draws the rectangle for the button

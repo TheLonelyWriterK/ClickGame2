@@ -36,9 +36,6 @@ class MainMenu extends Phaser.Scene {
         // Sets the text resolution for the "moneyButtonText"
         this.moneyButtonText = 1;
 
-        // Sets the text resolution for the "upgradeMenuButtonText"
-        this.upgradeMenuButtonText.resolution = 1;
-
 
         // Money Button
         // Creates the rectangle for the money button
@@ -65,7 +62,10 @@ class MainMenu extends Phaser.Scene {
         this.upgradeMenuButton.on("pointerdown", this.onClickOpenUpgradeMenu, this)
 
         // Let's the player know this is the upgrade menu
-        this.upgradeMenuButtonText = this.add.text(800, 600, "Upgrade Menu", { color: 'red', fontSize: 14, font: "Times New Roman" }).setOrigin(0.5)
+        this.upgradeMenuButtonText = this.add.text(800, 600, "Upgrade Menu", { color: 'red', fontSize: 14, font: "Times New Roman" }).setOrigin(0.5);
+
+        // Sets the text resolution for the "upgradeMenuButtonText"
+        this.upgradeMenuButtonText.resolution = 1;
 
 
         // Logs the end of the loading of the level

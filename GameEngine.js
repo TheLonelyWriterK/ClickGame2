@@ -5,8 +5,10 @@ var config = {
     height: 900,
     scaleMode: Phaser.Scale.FIT,
     backgroundColor: 0x112233,
+    hidePhaser: true,
+    scene: [TitleScreen, Hud, MainMenu, UpgradeScreen],
     gameVersion: "0.01",
-    scene: [TitleScreen, MainMenu, UpgradeScreen, Hud]
+    gameTitle: "First Phaser Game"
 
 }
 
